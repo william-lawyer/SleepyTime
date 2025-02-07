@@ -1,0 +1,220 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Заголовки */
+h1 {
+  color: #7050EB;
+  margin-bottom: 10px;
+  font-size: 45px;
+}
+
+h2 {
+  color: #5466EB;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 14px;
+  color: #5466EB;
+  margin-bottom: 8px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #7050EB;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+input[type="time"] {
+  width: 48%;
+  display: inline-block;
+}
+
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button.next-btn {
+  background-color: #7F8DF0;
+  border: none;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button.next-btn:hover {
+  background-color: #5495EB;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button.next-btn:active {
+  transform: scale(1.02);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+button.prev-btn {
+  background-color: #ddd;
+  border: none;
+  color: #333;
+  margin-top: 10px;
+}
+
+button.submit-btn {
+  background-color: #7F8DF0;
+  border: none;
+  color: white;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+button.submit-btn:hover {
+  background-color: #5495EB;
+}
+
+/* Переключение шагов */
+.step {
+  display: none; /* Скрываем все шаги по умолчанию */
+}
+
+.step.active {
+  display: block; /* Показываем только активный шаг */
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  color: #5466EB;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #5495EB;
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  color: #5466EB;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+/* При фокусе добавляем красивую обводку */
+input[type="time"]:focus {
+  border-color: #5495EB;
+  outline: none;
+}
+
+/* Стили для группы с чекбоксом */
+.checkbox-group {
+  display: flex;
+  flex-direction: row; /* Горизонтальное расположение элементов */
+  align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px; /* Отступ между чекбоксом и текстом */
+  width: auto;  /* Убедимся, что размер чекбокса стандартный */
+}
