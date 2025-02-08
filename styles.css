@@ -111,6 +111,7 @@ button.next-btn {
   font-size: 16px;
   border-radius: 5px;
   width: 100%;
+  margin-top:  10px;
 }
 
 button.next-btn:hover {

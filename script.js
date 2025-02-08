@@ -1,23 +1,23 @@
 const BOT_TOKEN = "7288186926:AAGVvGroGgjW5XgmS_Ult_GR6ZIc18gOQZw";  // 🔥 Замени на свой токен
 const CHAT_ID = "729406890";      // 🔥 Замени на свой chat_id
 
-// Функции для переключения между этапами
-function nextStep(currentStep) {
-  const currentSection = document.getElementById(`step-${currentStep}`);
-  const nextSection = document.getElementById(`step-${currentStep + 1}`);
+    // Функции для переключения между шагами
+    function nextStep(currentStep) {
+      const currentSection = document.getElementById(`step-${currentStep}`);
+      const nextSection = document.getElementById(`step-${currentStep + 1}`);
+      
+      currentSection.classList.remove('active');
+      nextSection.classList.add('active');
+  }
 
-  currentSection.classList.remove('active');
-  nextSection.classList.add('active');
-}
-
-function prevStep(currentStep) {
-  const currentSection = document.getElementById(`step-${currentStep}`);
-  const prevSection = document.getElementById(`step-${currentStep - 1}`);
-
-  currentSection.classList.remove('active');
-  prevSection.classList.add('active');
-}
-
+  function prevStep(currentStep) {
+      const currentSection = document.getElementById(`step-${currentStep}`);
+      const prevSection = document.getElementById(`step-${currentStep - 1}`);
+      
+      currentSection.classList.remove('active');
+      prevSection.classList.add('active');
+  }
+  
 // Активируем первый шаг при загрузке страницы
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('step-1').classList.add('active');
